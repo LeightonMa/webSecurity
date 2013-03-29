@@ -1,0 +1,39 @@
+if (window.ActiveXobject) {//MSIE 6.0 or below
+
+    if(document.documentElement && typeof document.documentElement.style.maxHeight!= "undefined"){
+        if(typeof document.adoptNode != "undefined"){ //Safari3 & FF & Opera & chrome & IE8
+
+        }
+        //IE7
+    }
+    return "msie";
+}
+else if (typeof window.opera != "undefined") {
+    //"Opera" + window.opera.version()
+    return "opera";
+}
+else if ( typeof window.netscape != "undefined"){
+    //"Mozilla"
+    if(typeof window.Iterator != "undefined") {
+        //Firefox 2 or high
+        if(typeof document.styleSheetSets != "undefined"){
+        //Firefox 3 (although Opera9 support too)
+        }
+    }
+    return "mozilla";
+}
+else if (typeof window.pageXOffset != "undefined"){//Mozilla & Safari
+    //"safari"
+    try{
+        if(typeof external.AddSearchProvider != "undefined"){//firefox & chrome
+            //Google Chrome
+            return "chrome";
+        }
+    } catch (e) {
+        return "safari";
+    }
+}
+else {
+    //Unknown
+    return "unknown";
+}
