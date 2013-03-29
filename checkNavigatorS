@@ -1,0 +1,16 @@
+//Firefox detector 2/3 by DoctorDan
+FF=/a/[-1]=='a'
+//Firefox 3 by me:-
+FF3=(function x(){})[-5]=='x'
+//Firefox 2 by me:-
+FF2=(function x(){})[-6]=='x'
+//IE detector I posted previously
+IE='\v'=='v'
+//Safari detector by me
+Saf=/a/.__proto__=='//'
+//Chrome
+Chr=/source/.test((/a/.toString+''))
+//Opera by me
+Op=/^function \(/.test([].sort)
+//IE6  detector using conditionals
+try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000
